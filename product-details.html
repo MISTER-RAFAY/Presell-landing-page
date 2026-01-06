@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - DigitCastle</title>
+    <link rel="shortcut icon" href="Images/Favicon.png.png" type="image/x-icon">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- NAVIGATION -->
+    <nav class="bg-white shadow-sm w-full z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-bold text-2xl text-indigo-600">DigitCastle</a>
+                </div>
+                <div>
+                    <a href="index.html"
+                        class="text-gray-600 hover:text-indigo-600 font-semibold transition duration-300">
+                        &larr; Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENT SECTION -->
+    <section class="py-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-indigo-50 text-indigo-600 text-sm font-semibold mb-6">
+                    Product Overview
+                </span>
+
+                <h1 id="product-title" class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-8 leading-tight">
+                    Loading Product...
+                </h1>
+
+                <div class="prose prose-lg text-gray-600 leading-relaxed space-y-6">
+                    <p>
+                        This digital product is designed to revolutionize the way you approach your workflow.
+                        Meticulously crafted with the user in mind, it combines efficiency with simplicity, ensuring
+                        that you can achieve your goals faster than ever before. Whether you are a beginner or a
+                        seasoned professional, you will find immense value in the structured approach and premium
+                        quality content provided.
+                    </p>
+                    <p>
+                        By leveraging the strategies and tools included in this package, you can bypass the common
+                        pitfalls that hold most creators back. We have condensed years of experience into actionable
+                        insights, templates, and guides that are easy to implement. This isn't just theory; it's a
+                        practical roadmap to success that has been tested and proven to deliver results in real-world
+                        scenarios.
+                    </p>
+                    <p>
+                        Furthermore, continuous updates and support ensure that you are never left behind. The digital
+                        landscape is constantly evolving, and this product evolves with it. You gain access to a
+                        community of like-minded individuals and resources that keep you on the cutting edge. Invest in
+                        your growth today and start seeing the difference immediately.
+                    </p>
+                    <p>
+                        Don't let technical challenges or lack of direction stall your progress. With this product, you
+                        have a comprehensive solution at your fingertips. From foundational concepts to advanced
+                        techniques, everything is covered in detail. Take the first step towards a more productive and
+                        profitable future.
+                    </p>
+                </div>
+
+                <div class="mt-12 pt-8 border-t border-gray-100">
+                    <a href="index.html#preorder"
+                        class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
+                        Get Early Access Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm">© 2023 DigitCastle. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Get the product name from the URL query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const product = urlParams.get('product');
+
+        if (product) {
+            document.getElementById('product-title').innerText = product;
+            document.title = `${product} - DigitCastle`;
+        } else {
+            document.getElementById('product-title').innerText = "Premium Digital Product";
+        }
+    </script>
+</body>
+
+</html>
